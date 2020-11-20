@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css attr函数</title>
+    <style>
+      .tooltip {
+        width: 100px;
+        position: relative;
+        margin: 0 auto;
+      }
+      .tooltip:hover::after {
+        padding: 5px;
+        position: absolute;
+
+        /* 在伪元素中作为字符串中使用 */
+        content: attr(data-tooltip);
+        color: #fff;
+        background-color: #000;
+        top: 25px;
+        left: 0;
+      }
+      .tooltip:hover .arrow::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 20%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="tooltip" data-tooltip="一段提示">
+      Hover me
+      <span class="arrow"></span>
+    </div>
+  </body>
+</html>

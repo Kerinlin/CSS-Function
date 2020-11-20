@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css背景图片函数</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+      }
+      .box1 {
+        /* 从左到右渐变 类似还有 to top,to bottom, t0 left*/
+        /* background-image: linear-gradient(to right,#fff,#000); */
+
+        /* 从左上角开始到右下角渐变 ,类似的可推导出*/
+        /* background-image: linear-gradient(to right bottom, #fff, #000); */
+
+        /* 指定角度 */
+        /* background-image: linear-gradient(180deg,#fff, #000); */
+
+        /* 指定梯度线，从哪个位置开始渐变，例子中是从左向右，白色颜色到长度的10%后就开始变成黑色 */
+        background-image: linear-gradient(to right,#fff,50%, #000);
+
+
+      }
+
+      .box2 {
+      }
+
+      .box3 {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+  </body>
+  scale
+</html>
