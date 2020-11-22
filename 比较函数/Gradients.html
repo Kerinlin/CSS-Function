@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>渐变过渡</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .box1{
+      width: 100%;
+      height: 100vh;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #2c3e50, #2c3e50, #3498db);
+    }
+
+    .box2{
+      width: 100%;
+      height: 100vh;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #2c3e50, #2c3e50 min(10vw, 60%), #3498db);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- <div class="box1"></div> -->
+    <div class="box2"></div>
+  </div>
+</body>
+</html>
