@@ -27,7 +27,7 @@ clamp函数需要传入3个参数，一个最小值，一个默认值，一个�
 
     clamp(MIN,DEFAULT,MAX)
 
-clamp就相当于** max(MIN,min(DEFAULT,MAX))**
+clamp就相当于**max(MIN,min(DEFAULT,MAX))**
 
 **案例**
 
