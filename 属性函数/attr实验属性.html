@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>attr实验属性</title>
+    <style>
+      .test-attr {
+        --mbNum: attr(mb px);
+        margin-bottom: var(--mbNum);
+        --mlNum: attr(ml px);
+        margin-left: var(--mlNum);
+      }
+    </style>
+    <script src="./css-attr.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div mb="100" class="test-attr">测试Polyfill attr1</div>
+      <div ml="100" class="test-attr">测试Polyfill attr2</div>
+    </div>
+  </body>
+</html>

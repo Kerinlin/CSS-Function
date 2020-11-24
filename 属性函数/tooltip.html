@@ -18,9 +18,12 @@
         content: attr(data-tooltip);
         color: #fff;
         background-color: #000;
+        border-radius: 10px;
         top: 25px;
         left: 0;
       }
+
+      /* 箭头 */
       .tooltip:hover .arrow::after {
         content: "";
         position: absolute;
@@ -31,7 +34,6 @@
         border-style: solid;
         border-color: transparent transparent black transparent;
       }
-
     </style>
   </head>
   <body>
