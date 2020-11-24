@@ -177,6 +177,10 @@ objParseAttr就是 attr(mb px)解析后的对象，valueAttr就是 自定义属�
 
 ![DUucGR.png](https://s3.ax1x.com/2020/11/25/DUucGR.png)
 
+效果图
+
+![DUKjpR.png](https://s3.ax1x.com/2020/11/25/DUKjpR.png)
+
 详细的Polyfill代码请 [戳这](https://www.zhangxinxu.com/study/202008/css-attr.js "戳这")
 
 ### 最后
