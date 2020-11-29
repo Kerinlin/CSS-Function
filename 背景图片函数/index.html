@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>背景图片函数</title>
+    <style>
+      .url-wrapper {
+        width: 200px;
+        height: 200px;
+        /* background-image: url('./背景图片函数.png'); */
+        background-image: url("https://s3.ax1x.com/2020/11/29/DcV9V1.png                                                                                      ");
+        /* background-image: image('a.webP','a.png','a.jpg'); */
+      }
+      .image-set-wrapper {
+        width: 200px;
+        height: 200px;
+        background: url("./bg1x.png");
+        background-image: -webkit-image-set(
+          url(./bg1x.png) 1x,
+          url(./bg2x.png) 2x
+        );
+        background-repeat: no-repeat;
+      }
+      .cross-fade-wrapper {
+        width: 200px;
+        height: 200px;
+        background-image: -webkit-cross-fade(
+          url("./bg1x.png"),
+          url("./bg2x.png"),
+          0%
+        );
+        /* background-image: -webkit-cross-fade(url('./bg1x.png') 30%,url('./bg2x.png') 70%); */
+        /* background-image: cross-fade(url('./bg1x.png'),url('./bg2x.png'),70%); */
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .element-wrapper{
+        width: 200px;
+        height: 200px;
+      }
+      #element-test {
+        width: 200px;
+        height: 200px;
+        background: -moz-element(#ele);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="url-wrapper"></div>
+      <div class="image-set-wrapper"></div>
+      <div class="cross-fade-wrapper"></div>
+
+      <div class="element-wrapper">
+        <span id="ele" contenteditable>hello world</span>
+      </div>
+
+      <div id="element-test"></div>
+    </div>
+  </body>
+</html>
