@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>计数函数</title>
+    <style>
+      .demo1 {
+        counter-reset: counter1 123;
+      }
+      .demo1:before {
+        content: counter(counter1, simp-chinese-formal);
+      }
+      .demo2 {
+        counter-reset: counter2 1;
+        /* counter-increment: counter2 -2; */
+      }
+      section:before {
+        content: counter(counter2, decimal);
+        counter-increment: counter2 2;
+      }
+
+      .father {
+        counter-reset: counter3;
+        padding-left: 30px;
+      }
+      .son:before {
+        content: counters(counter3, "-")'.';
+        counter-increment: counter3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo1"></div>
+
+    <div class="demo2">
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+    </div>
+
+    <div class="father">
+      <div class="son">
+        内容一
+        <div class="father">
+          <div class="son">子内容一</div>
+          <div class="son">子内容二</div>
+          <div class="son">子内容三</div>
+        </div>
+      </div>
+      <div class="son">
+        内容二
+        <div class="father">
+          <div class="son">
+            子内容一
+            <div class="father">
+              <div class="son">子子内容一</div>
+              <div class="son">子子内容二</div>
+            </div>
+          </div>
+          <div class="son"></div>
+          <div class="son"></div>
+          <div class="son"></div>
+        </div>
+      </div>
+      <div class="son">
+        内容三
+      </div>
+    </div>
+
+  </body>
+</html>
